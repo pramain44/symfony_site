@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+{% block title %}ReiRaku - Accueil
+{% endblock %}
+
+{% block body %}
+
+     <div class="title">
+            <h1>Bienvenue Sur ReiRaku</h1> 
+            <p class="underText">Un blog de partage d'avis et de réflexion sur nos mangas favoris</p>
+        </div>
+        <div class="divideContainer">
+            <div class="whiteDivider"></div>
+        </div>
+        </div>
+        <div class="formContainer">
+            <form method="get">
+                <div class="wrap">
+                    <input class="searchBar" type="search" name="search" placeholder="Rechercher une oeuvre" aria-label="search" name="search">
+                    <button class="searchBtn" type="submit"><img src="" alt="">GO</button>    
+                </div>
+            </form>
+        </div>
+    </header>
+    <section class="jsonFetch">
+        <div class="categoryBtn">
+            <div class="categoriesTitle">
+                <h2>Triez par Catégorie</h2>
+            </div>
+            <div class="categories">               
+                <a href="homeController.php?search=bangers"><button class="btn" value="bangers">Bangers</button></a>
+                <a href="homeController.php?search=classiques"><button class="btn" type="submit" value="Classiques">Classiques</button></a>
+                <a href="homeController.php?search=hidden"><button class="btn" type="submit" value="Hidden" >Hidden Gems</button></a>              
+            </div>
+        </div>
+        <div class="divideContainer">
+            <div class="pinkDivider"></div>
+        </div>
+
+{% endblock %}
+
+
+

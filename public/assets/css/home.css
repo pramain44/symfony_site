@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/* -------Affichage mobile des Cards------ */
+@media screen and (max-width: 1100px){
+    div .cards{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    div .card{
+        width: 100%;
+    }
+    a .imgBangers {
+        width: 20rem;
+        max-height:300px;
+        object-fit: scale-down;
+    }
+    
+    a .imgClassiques{
+        width: 20rem;
+        max-height: 300px;
+        object-fit: scale-down;
+    }
+    
+    a .imgHidden.Gems{
+        width: 20rem;
+        max-height: 300px;
+        object-fit: scale-down;
+    }
+    .title h1{
+        position: absolute;
+        top: 120px;
+    }
+    .title p{
+        display: none;
+    }
+    .formContainer{
+        padding-top: 1.8rem;
+    }
+}
+/* ------------header ------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: rgb(255, 192, 203, 0.6);
+    height: 50vh;
+}
+
+.logoImg{
+    width: 10rem;
+}
+
+.connectImg{
+    width: 11rem;
+}
+
+.navBar{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.mainNav{
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.profile{
+    padding-left: 2rem;
+}
+
+.profileD{
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+/* style des href  */
+a{
+    color: #23262f;
+    font-weight: bold;
+}
+.inherit{
+    text-decoration: none;
+}
+
+ul{
+    width: 50%;
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem
+}
+/* btn de connexion */
+.connect{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+/* gestion de l'affichage mobile du header */
+@media screen and (max-width: 720px){
+header{
+    height: 45vh;
+}
+.mainNav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ul{
+    font-size: 1rem;
+}
+.connectImg{
+    display: none;
+}
+.logoImg{
+    width: 6rem;
+}
+.whiteDivider{
+    display: none;
+}
+header .title{
+    padding-bottom: 2rem;
+}
+div .searchBtn{
+    width: 5rem;
+}
+}
+
+/* ----titre et barre de recherche---- */
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    position: absolute;
+    top:100px
+}
+.underText{
+    font-size: 1.2rem;
+    padding-bottom: 2.2rem;
+    font-style: italic;
+}
+.whiteDivider{
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 2rem;
+}
+
+.divideContainer{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.searchBar{
+    width: 15rem;
+    height: 2rem;
+    border: none;
+    border-radius: 2px;
+}
+
+.searchBtn{
+    padding-left: 0.40rem;
+    padding-right: 0.40rem;
+    padding-top: 0.40rem;
+    padding-bottom: 0.40rem;
+    background-color: #00B4CC;
+    color: #fff;
+}
+/* ------------fin du header-------------- */
+
+/* zone fetch (cards) */
+
+.jsonFetch{
+    background-color:#23262f;
+}
+/* -----style des boutons de categorie----- */
+.categoriesTitle{
+    color: aliceblue;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.categories{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+.categoryBtn{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+.btn{
+    width: 8rem;
+    height: 2rem;
+    color: #fff;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%) !important;
+    background-color: #F06191 !important;
+    border-color: #ff5860 !important;
+    box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.pinkDivider{
+    width: 50rem;
+    height: 4px;
+    background: hotpink;
+    margin-bottom: 2rem;
+}
+
+/* -------styles des Cards------ */
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow:row wrap;
+    text-align: center;
+}
+
+.imgBangers {
+    width: 20rem;
+    max-height:440px;
+}
+
+.imgClassiques{
+    width: 20rem;
+    max-height:440px ;
+}
+
+.imgHidden.Gems{
+    width: 20rem;
+    max-height:440px ;
+}
+
+.card{
+    width: 30%;
+    padding-bottom: 2rem;
+}
+
+.titleProducts{
+    font-size: 2.2rem;
+    color: aliceblue;
+}
+
+.ficheLink{
+    width: 30%;
+    text-decoration: none;
+}
+
+.visible{
+    display: none;
+}
+
+.footerHref{
+    padding-left: 2rem;
+}

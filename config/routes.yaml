@@ -1,0 +1,14 @@
+index:
+    path: /
+    controller: App\Controller\testController::index
+
+test:
+    path: /test/{age<\d+>?0}
+    controller: App\Controller\testController::yolo
+    # defaults:
+    #     age: 0
+    # requirements:
+    #     age: \d+
+    # voir la doc requirements
+    # host: {subdomain}.monsite.cuck
+    # methods: [GET,POST]
