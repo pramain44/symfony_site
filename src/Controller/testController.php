@@ -24,7 +24,8 @@ class testController extends AbstractController {
 
         //return new Response ("vous avez $age");
 
-        return $this->render('index.html.twig');
+            return $this->render('test/index.html.twig');
+   
     }
 
     public function yolo(Request $request, $age):Response{
@@ -34,3 +35,4 @@ class testController extends AbstractController {
         return new Response ("2eme page UwU $age");
     }
 }
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>todolist</title>
+</head>
+<body>
+    <ol>
+     {# on boucle ds un liste pour faire un tableau et on utilise la variable crée ds le controller #}
+    {% for name, content in app.session.get('todos') %}
+    <li>
+        {{name}} : {{content}}
+    </li>
+    {% endfor %}
+    </ol>
+</body>
+</html>

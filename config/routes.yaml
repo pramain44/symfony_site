@@ -12,3 +12,7 @@ test:
     # voir la doc requirements
     # host: {subdomain}.monsite.cuck
     # methods: [GET,POST]
+
+todoList:
+    path: /todoList
+    controller: App\Controller\TodoController::index
