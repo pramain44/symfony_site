@@ -8,6 +8,24 @@
     <title>todolist</title>
 </head>
 <body>
+
+    {# on boucle pour afficher les sessions flash car on crée un tableau avec addFlash #}
+    {% for message in app.session.flashbag.get('info') %}
+        <div>
+            {{message}}
+        </div>
+    {% endfor %}
+    {% for message in app.session.flashbag.get('succes') %}
+        <div>
+            {{message}}
+        </div>
+    {% endfor %}
+    {% for message in app.session.flashbag.get('error') %}
+        <div>
+            {{message}}
+        </div>
+    {% endfor %}
+
     <ol>
      {# on boucle ds un liste pour faire un tableau et on utilise la variable crée ds le controller #}
     {% for name, content in app.session.get('todos') %}

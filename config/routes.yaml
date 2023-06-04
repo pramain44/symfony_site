@@ -8,11 +8,28 @@ test:
     # defaults:
     #     age: 0
     # requirements:
-    #     age: \d+
-    # voir la doc requirements
+    #     age: \d+ les requirements fonctionnent avec les expressions régulière (là on en veut un entier)
+    # voir la doc requirements regexr.com
     # host: {subdomain}.monsite.cuck
     # methods: [GET,POST]
 
 todoList:
     path: /todoList
     controller: App\Controller\TodoController::index
+
+todo.add:
+    path: /todoList/add/{name}/{content}
+    controller: App\Controller\TodoController::addtodo
+
+todo.update:
+    path: /todoList/update/{name}/{content}
+    controller: App\Controller\TodoController::update
+
+todo.delete:
+    path: /todoList/delete/{name}
+    controller: App\Controller\TodoController::delete
+
+todo.reset:
+    path: /todoList/reset
+    controller: App\Controller\TodoController::reset
+    
