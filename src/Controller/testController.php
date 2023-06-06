@@ -32,7 +32,12 @@ class testController extends AbstractController {
        
         // $age = $request->attributes->get('age',0);
 
-        return new Response ("2eme page UwU $age");
+        return $this->render(('test/test.html.twig'));
+    }
+
+    public function heritage(): Response {
+
+        return $this->render('heritage.html.twig');
     }
 }
 

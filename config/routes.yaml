@@ -12,6 +12,9 @@ test:
     # voir la doc requirements regexr.com
     # host: {subdomain}.monsite.cuck
     # methods: [GET,POST]
+test.heritage:
+    path: /test/heritage
+    controller: App\Controller\testController::heritage
 
 todoList:
     path: /todoList
@@ -32,4 +35,15 @@ todo.delete:
 todo.reset:
     path: /todoList/reset
     controller: App\Controller\TodoController::reset
+
+tab:
+    path: /tab/{nb<\d+>?5}
+    controller: App\Controller\tabController::index
+
+tab.users:
+    path: /tab/users
+    controller: App\Controller\tabController::users
+
+
+
     

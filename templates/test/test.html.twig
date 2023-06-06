@@ -1,0 +1,21 @@
+{% extends "heritage.html.twig" %}
+
+{% block title %}belle bite{% endblock %}
+
+{# on peux appeller le contenu du block parent  #}
+{% block corps %} 
+{{parent()}}
+issou
+{# pour un href on utilise la fonction path ou l'on met le nom des routes directements, au quels on peux ajouter les parametres si'l yen a(id) #}
+<a href="{{path('tab.users')}}">changer de page</a>
+
+{# pour un url absolue (donc pas relatif au site donc pas le nomd le domaine, on utilise la methode url #}
+url absolue : {{url('tab.users')}}
+{% endblock %}
+
+{# on peut aussi appeller un bout d'une page twig avec include #}
+{# {{include('')}} #}
+
+{# pour appeller un controller (et donc un fonction qui serai dessus) il faut faire un render avec un double \\ et passer les parametre de la fonction #}
+
+{# methode assets qui pointe sur le dossier public pour les liens css/js etc... #}
