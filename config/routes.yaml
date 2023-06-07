@@ -44,6 +44,11 @@ tab.users:
     path: /tab/users
     controller: App\Controller\tabController::users
 
+personne:
+    path: /personne
+    controller: App\Controller\PersonneController::index
+
+
 
 
     
