@@ -48,6 +48,19 @@ personne:
     path: /personne
     controller: App\Controller\PersonneController::index
 
+personne.add:
+    path: /personne/add
+    controller: App\Controller\PersonneController::addPersonne
+
+personne.detail:
+    path: /personne/{id<\d+>}
+    controller: App\Controller\PersonneController::detail
+
+personne.all:
+    path: /personne/all/{page?1}/{nb?5}
+    controller: App\Controller\PersonneController::indexAll
+
+
 
 
 

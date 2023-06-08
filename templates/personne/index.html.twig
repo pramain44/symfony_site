@@ -1,20 +1,31 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liste-personnes</title>
+</head>
+<body>
+{# sessionflash #}
 
-<title>Hello PersonneController!</title>
+    {% for message in app.session.flashbag.get('error') %}
+        <div>
+            {{message}}
+        </div>
+    {% endfor %}
+  {% for personne in personnes %}
+    <div>{{personne.name}}</div>
+    <div>{{personne.firstname}}</div>
+    <div>{{personne.age}}</div>
+    <div><a href="{{path('personne.detail',{id: personne.id})}}">Detail</a></div>
+  {% endfor %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+  <div>
+  {% for i in range(1,nbPage) %}
+    <button><a href="{{path('personne.all', {page: i, nb: nb}) }}">{{i}}</a></button>
+  {% endfor %}
+  </div>
+</body>
+</html>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/pekos/OneDrive/Bureau/symfony_site/src/Controller/PersonneController.php'|file_link(0) }}">src/Controller/PersonneController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/pekos/OneDrive/Bureau/symfony_site/templates/personne/index.html.twig'|file_link(0) }}">templates/personne/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
